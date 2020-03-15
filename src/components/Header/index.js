@@ -25,7 +25,7 @@ export default function Header() {
       </nav>
       <aside>
         <span>Admin FastFeet</span>
-        <span>sair do sitema</span>
+        <span>sair do sistema</span>
       </aside>
     </Container>
   );

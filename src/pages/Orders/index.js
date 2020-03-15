@@ -81,7 +81,7 @@ export default function orders() {
     <>
       <Header />
       <Container>
-        <h1>Gerenciando entregadores</h1>
+        <h1>Gerenciando encomendas</h1>
 
         <Control>
           <div>
@@ -117,8 +117,8 @@ export default function orders() {
               <td>
                 <Status status={item.status} />
               </td>
-              <td>
-                <FaEllipsisH onClick={e => handleClickActions(e, index)} />
+              <td onClick={e => handleClickActions(e, index)}>
+                <FaEllipsisH />
               </td>
             </tr>
           ))}

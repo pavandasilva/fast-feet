@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 20px 80px;
   margin-top: 20px;
+  overflow: ${({ showScrollbar }) => (showScrollbar ? 'visible' : 'hidden')};
 `;
 
 export const Table = styled.table`
   width: 100%;
-
   font-size: 16px;
   line-height: 20px;
   color: #666666;
@@ -171,5 +171,83 @@ export const MenuPopOver = styled.div`
     cursor: pointer;
     width: 20px;
     height: auto;
+  }
+`;
+
+export const Modal = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  top: 0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ModalContent = styled.div`
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  border-radius: 4px;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
+  background-color: #ffffff;
+  padding: 30px 0px 30px;
+
+  svg {
+    fill: #666666;
+    height: 40px;
+    width: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  h1 {
+    font-size: 16px;
+    color: #444444;
+    font-weight: 700;
+  }
+
+  div {
+    border-bottom: #666666 1px solid;
+    padding: 20px 0px;
+    margin: 0px 60px;
+
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #666666;
+      font-weight: 400;
+    }
+  }
+
+  div:nth-last-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    img {
+      margin-top: 10px;
+      width: 300px;
+      height: auto;
+      align-self: center;
+    }
+    border: none;
+  }
+`;
+
+export const Close = styled.aside`
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  &:hover {
+    svg {
+      fill: #444;
+    }
   }
 `;
